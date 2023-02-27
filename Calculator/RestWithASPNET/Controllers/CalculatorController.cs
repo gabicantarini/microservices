@@ -7,6 +7,7 @@ namespace RestWithASPNET.Controllers;
 public class CalculatorController : ControllerBase
 {
     private readonly ILogger<CalculatorController> _logger;
+    private bool isNumber;
 
     public CalculatorController(ILogger<CalculatorController> logger)
     {
@@ -25,13 +26,26 @@ public class CalculatorController : ControllerBase
         return BadRequest("Invalid input");
     }
 
-    private int ConvertToDecimal(string firstNumber)
+    private bool IsNumeric(string strNumber)
     {
-        throw new NotImplementedException();
+        double number;
+        bool isNumber = double.TryParse(
+            strNumber, 
+            System.Globalization.NumberStyles.Any, 
+            System.Globalization.NumberFormatInfo.InvariantInfo, 
+            out number);
+        return isNumber;
     }
 
-    private bool IsNumeric(string firstNumber)
+    private decimal ConvertToDecimal(string strNumber)
     {
-        throw new NotImplementedException();
+        decimal decimalValue;
+        if(decimal.TryParse(strNumber, out decimalValue))
+        {
+            return decimalValue;
+        }
+        return 0;
     }
+
+
 }
