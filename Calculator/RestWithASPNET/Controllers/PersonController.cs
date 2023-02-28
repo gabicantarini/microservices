@@ -1,47 +1,52 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using RestWithASPNET.Model;
+using RestWithASPNET.Services;
 
-namespace RestWithASPNET.Controllers;
 
-[ApiController]
-[Route("[controller]")]
-public class PersonController : ControllerBase
-{
-    private readonly ILogger<PersonController> _logger;
-    private bool isNumber;
+namespace RestWithASPNET.Controllers { 
 
-    public PersonController(ILogger<PersonController> logger)
+    [ApiController]
+    [Route("[controller]")]
+    public class PersonController : ControllerBase
     {
-        _logger = logger;
-    }
+        private readonly ILogger<PersonController> _logger;
+        private IPersonService _personService;
 
-    [HttpGet("sum/{firstNumber}/{secondNumber}")]
-
-    public IActionResult Sum(string firstNumber, string secondNumber)
-    {
-        if(IsNumeric(firstNumber) && IsNumeric(secondNumber))
+        public PersonController(ILogger<PersonController> logger, IPersonService personService)
         {
-            var sum = ConvertToDecimal(firstNumber) + ConvertToDecimal(secondNumber);
-            return Ok(sum.ToString());
+            _logger = logger;
+            _personService = personService;
         }
 
-        return BadRequest("Invalid input");
-    }
+        [HttpGet()]
 
-    [HttpGet("sub/{firstNumber}/{secondNumber}")]
-    public IActionResult Subtraction(string firstNumber, string secondNumber)
-    {
-        if (IsNumeric(firstNumber) && IsNumeric(secondNumber))
+        public IActionResult Get()
         {
-            var sub = ConvertToDecimal(firstNumber) - ConvertToDecimal(secondNumber);
-            return Ok(sub.ToString());
+          
+            return Ok(_personService.FindAll());
         }
 
-        return BadRequest("Invalid input");
+        [HttpGet("{id}")]
+
+        public IActionResult Get(long id)
+        {
+            var person = Ok(_personService.FindByID(id));
+            if (person == null) return NotFound();
+            return Ok(person);
+        }
+
+        [HttpPost("{id}")]
+
+        public IActionResult Post([FromBody] Person person)
+        {            
+            if (person == null) return BadRequest();
+            return Ok(_personService.Create(person));
+        }
+
+
+
+
+
     }
-
- 
-
-
-
-
 }
