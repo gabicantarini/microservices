@@ -27,14 +27,14 @@ namespace RestWithASPNET.Services.Implementations
             return persons;
         }
 
-        public Person FindByID(long id)
+        public Person FindByID(int i)
         {
             return new Person
             {
                 Id = IncrementAndGet(),
-                FirstName = "Gabriela",
-                LastName = "Cantarini",
-                Address = "Leiria, Portugal",
+                FirstName = "Person Name" + i,
+                LastName = "Person LasName" + i,
+                Address = "Person Address" + i,
                 Gender = "Female"
             };
         }
