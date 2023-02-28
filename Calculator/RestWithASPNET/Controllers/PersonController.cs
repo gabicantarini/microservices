@@ -44,6 +44,13 @@ namespace RestWithASPNET.Controllers {
             return Ok(_personService.Create(person));
         }
 
+        [HttpPut("{id}")]
+
+        public IActionResult Put([FromBody] Person person)
+        {
+            if (person == null) return BadRequest();
+            return Ok(_personService.Update(person));
+        }
 
 
 
