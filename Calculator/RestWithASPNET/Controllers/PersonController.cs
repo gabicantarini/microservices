@@ -7,7 +7,7 @@ using RestWithASPNET.Services;
 namespace RestWithASPNET.Controllers { 
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class PersonController : ControllerBase
     {
         private readonly ILogger<PersonController> _logger;
@@ -51,6 +51,7 @@ namespace RestWithASPNET.Controllers {
             if (person == null) return BadRequest();
             return Ok(_personService.Update(person));
         }
+
 
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)

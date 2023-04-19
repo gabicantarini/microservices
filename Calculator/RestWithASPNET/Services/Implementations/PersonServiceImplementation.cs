@@ -1,4 +1,6 @@
 ﻿using RestWithASPNET.Model;
+using System.Collections.Generic;
+using System.Threading;
 
 namespace RestWithASPNET.Services.Implementations
 {
@@ -27,14 +29,14 @@ namespace RestWithASPNET.Services.Implementations
             return persons;
         }
 
-        public Person FindByID(int i)
+        public Person FindByID(long id)
         {
             return new Person
             {
                 Id = IncrementAndGet(),
-                FirstName = "Person Name" + i,
-                LastName = "Person LasName" + i,
-                Address = "Person Address" + i,
+                FirstName = "Gabriela",
+                LastName = "Cantarini",
+                Address = "Leiria, Portugal",
                 Gender = "Female"
             };
         }
@@ -50,9 +52,9 @@ namespace RestWithASPNET.Services.Implementations
             return new Person
             {
                 Id = IncrementAndGet(),
-                FirstName = "Gabriela",
-                LastName = "Cantarini",
-                Address = "Leiria, Portugal",
+                FirstName = "Person Name" + i,
+                LastName = "Person LasName" + i,
+                Address = "Person Address" + i,
                 Gender = "Female"
             };
         }

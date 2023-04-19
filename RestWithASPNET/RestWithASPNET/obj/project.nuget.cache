@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "osLdvdj1h+f9ZgX7bSynj/WvTSN4am2XAIeLb81EOHgn43Z6yq3fS4389MCwmtNsm3qVDgbDH1icehEYgRjBcw==",
+  "dgSpecHash": "6gF2ShAJK/PMFcabJfojEA+KJOo1DprAiLdcFo7mEIqx6fW7snkIqWcWPPm5M39O7ipJHWmV+QS1mEjFwJZfOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriela\\Desktop\\Cantarini\\Gabriela\\2022TI\\dotnet\\microservices\\RestWithASPNET\\RestWithASPNET\\RestWithASPNET.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "C:\\Users\\Gabriela\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
