@@ -2,7 +2,7 @@
 
 namespace GeekShopping.ProductAPI.Repository
 {
-    public interface IProductRepository
+    public interface MySqlConnector
     {
         Task<IEnumerable<ProductVO>> FindAll();
         Task<ProductVO> FindById(long id);

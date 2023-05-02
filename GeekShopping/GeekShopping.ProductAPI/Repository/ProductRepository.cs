@@ -1,9 +1,13 @@
-﻿using GeekShopping.ProductAPI.Data.ValueObjects;
+﻿using AutoMapper;
+using GeekShopping.ProductAPI.Data.ValueObjects;
+using GeekShopping.ProductAPI.Model.Context;
 
 namespace GeekShopping.ProductAPI.Repository
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository : MySqlConnector
     {
+        private readonly MySqlConnector _context;
+        private IMapper _mapper;
         public Task<ProductVO> Create(ProductVO vo)
         {
             throw new NotImplementedException();
