@@ -1,13 +1,22 @@
 ﻿using AutoMapper;
 using GeekShopping.ProductAPI.Data.ValueObjects;
+using GeekShopping.ProductAPI.Model;
 using GeekShopping.ProductAPI.Model.Context;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace GeekShopping.ProductAPI.Repository
 {
     public class ProductRepository : IProductRepository
     {
-        private readonly MySqlContext _context;
+        private readonly MySQLContext _context;
         private IMapper _mapper;
+
+        public ProductRepository(MySQLContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
 
         public async Task<IEnumerable<ProductVO>> FindAll()
         {
@@ -16,11 +25,13 @@ namespace GeekShopping.ProductAPI.Repository
             //busca a lista de products e retorna o que tiver lá
         }
 
-        public Task<ProductVO> FindById(long id)
+        public async Task<ProductVO> FindById(long id)
         {
-            Product product = await _context.Products.Where(product => product.Id == id);
-            return _mapper.Map<List<ProductVO>>(product);
-            //busca a lista de products e retorna o que tiver lá
+            Product product =
+                await _context.Products.Where(p => p.Id == id)
+            .FirstOrDefaultAsync() ?? new Product();
+
+            return _mapper.Map<ProductVO>(product);
         }
 
         public Task<ProductVO> Create(ProductVO vo)
