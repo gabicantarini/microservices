@@ -15,7 +15,7 @@ namespace GeekShopping.ProductAPI.Model.Context
         {
             modelBuilder.Entity<Product>().HasData(new Product
             {
-                Id = 1,
+                Id = 2,
                 Name = "Mario Bross Mug",
                 Price = new decimal(69.90),
                 Description = "",
@@ -25,7 +25,7 @@ namespace GeekShopping.ProductAPI.Model.Context
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
-                Id = 2,
+                Id = 3,
                 Name = "Milennium Falcon",
                 Price = new decimal(359.99),
                 Description = "Star Wars Mission Fleet Han Solo Nave Milennium Falcon",
@@ -35,7 +35,7 @@ namespace GeekShopping.ProductAPI.Model.Context
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
-                Id = 3,
+                Id = 4,
                 Name = "Gamer T-shirt",
                 Price = new decimal(69.90),
                 Description = "",
@@ -45,7 +45,7 @@ namespace GeekShopping.ProductAPI.Model.Context
             });
             modelBuilder.Entity<Product>().HasData(new Product
             {
-                Id = 4,
+                Id = 5,
                 Name = "Coffee Benefits T-shirt",
                 Price = new decimal(69.90),
                 Description = "",
