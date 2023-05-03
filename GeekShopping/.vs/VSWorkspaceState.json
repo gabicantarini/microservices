@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GeekShopping.ProductAPI",
+    "\\GeekShopping.ProductAPI\\Config",
+    "\\GeekShopping.ProductAPI\\Data",
+    "\\GeekShopping.ProductAPI\\Data\\ValueObjects",
+    "\\GeekShopping.ProductAPI\\Repository"
+  ],
+  "SelectedNode": "\\GeekShopping.sln",
+  "PreviewInSolutionExplorer": false
+}
