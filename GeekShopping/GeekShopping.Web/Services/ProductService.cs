@@ -29,6 +29,14 @@ namespace GeekShopping.Web.Services
             return await response.ReadContentAs<ProductModel>();
         }
 
+        public async Task<ProductModel> CreateProduct(ProductModel model, string token)
+        {
+            _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            var response = await _client.PostAsJson(BasePath, model);
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<ProductModel>();
+            else throw new Exception("Something went wrong when calling API");
+        }
 
 
 
