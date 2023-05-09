@@ -16,5 +16,10 @@ namespace GeekShopping.Web.Controllers
             var products = _productService.FindAllProducts("");
             return View(products);
         }
+
+        public async Task<IActionResult> ProductCreate()
+        {
+            return View();
+        }
     }
 }
