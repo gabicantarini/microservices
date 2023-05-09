@@ -21,5 +21,19 @@ namespace GeekShopping.Web.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ProductCreate(ProductModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var token = await HttpContext.GetTokenAsync("access_token");
+                var response = await _productService.CreateProduct(model, token);
+                if (response != null) return RedirectToAction(
+                     nameof(ProductIndex));
+            }
+            return View(model);
+        }
     }
 }
