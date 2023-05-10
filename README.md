@@ -1,1 +1,54 @@
-# microservices
+# GeekShopping app web in progress...
+
+# Index
+
+- [Project overview](#id01)
+- [Technologies](#id02)
+- [Photos](#id03)
+- [Requirements](#id04)
+- [Author](#id05)
+
+
+
+## Project overview <a name="id01">Barbershop App</a>
+
+This is a GeekShopping web. It is a microservices application web to publish geek products. The pages for this application are:
+
+- homepage.
+- products.
+- contact.
+
+<h3>Visit webpage: </h3><a href="">GeekShopping</a>
+
+## Technologies <a name="#id02"></a>
+
+I've used the follow technologies:<br/>
+
+<code><img height="20" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></code>
+<code><img height="20" src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"></code>
+<code><img height="20" src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"></code>
+<code><img height="20" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"></code>
+<code><img height="20" src="" alt=".Net img"></code>
+
+
+
+## Photos <a name="#id03"></a>
+<code><img height="300" width="500" src="" alt="GeekShopping img"></code>
+
+
+
+# Requirements <a name="id04"></a>
+<p>Compiling info:</p>
+
+
+<br />
+
+- [x] Code editor as your preference (I recommend Visual Studio Code 2022)
+- [x] Git
+- [x] Package management Yarn or NPM
+
+<br />
+
+# Author <a name="id05"></a>
+
+<a href="https://www.linkedin.com/in/gabrielacantarini/">Gabriela Cantarini</a>
