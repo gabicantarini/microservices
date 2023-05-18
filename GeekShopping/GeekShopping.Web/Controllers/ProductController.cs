@@ -15,6 +15,8 @@ namespace GeekShopping.Web.Controllers
     {
         private readonly IProductService _productService;
 
+        public object ProductIndex { get; private set; }
+
         public ProductController(IProductService productService)
         {
             _productService = productService ?? throw new ArgumentNullException(nameof(productService));
