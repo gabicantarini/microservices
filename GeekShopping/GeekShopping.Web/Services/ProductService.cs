@@ -3,6 +3,7 @@ using GeekShopping.Web.Services.IServices;
 using GeekShopping.Web.Utils;
 using System.Net.Http.Headers;
 
+
 namespace GeekShopping.Web.Services
 {
     public class ProductService : IProductService
@@ -54,7 +55,5 @@ namespace GeekShopping.Web.Services
                 return await response.ReadContentAs<bool>();
             else throw new Exception("Something went wrong when calling API");
         }
-
-
     }
 }

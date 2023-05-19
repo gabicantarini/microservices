@@ -1,4 +1,4 @@
-﻿@model IEnumerable<GeekShopping.Web.ProductModels>
+﻿@model IEnumerable<GeekShopping.Web.Models.ProductModel>
 
 <br/>
 <br/>
@@ -27,8 +27,8 @@
                 </th>
             </tr>
         </thead>
-        <tbody>
-            @foreach (var item in Model)
+       <tbody>
+           @foreach (var item in Model)
             {
                 <tr>
                     <td>
