@@ -1,9 +1,9 @@
-﻿using GeekShopping.Web.Services.IServices;
-using Microsoft.AspNetCore.Mvc;
-using GeekShopping.Web.Models;
+﻿using GeekShopping.Web.Models;
+using GeekShopping.Web.Services.IServices;
 using GeekShopping.Web.Utils;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +15,14 @@ namespace GeekShopping.Web.Controllers
     {
         private readonly IProductService _productService;
 
-        public object ProductIndex { get; private set; }
-
         public ProductController(IProductService productService)
         {
             _productService = productService ?? throw new ArgumentNullException(nameof(productService));
         }
-        public async Task<IActionResult> ProducIndex()
+
+        public async Task<IActionResult> ProductIndex()
         {
-            var products = _productService.FindAllProducts("");
+            var products = await _productService.FindAllProducts("");
             return View(products);
         }
 
@@ -78,7 +77,7 @@ namespace GeekShopping.Web.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = Role.Admin)]
+        //[Authorize(Roles = Role.Admin)]
         public async Task<IActionResult> ProductDelete(ProductModel model)
         {
             var token = await HttpContext.GetTokenAsync("access_token");
