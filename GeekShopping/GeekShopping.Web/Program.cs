@@ -11,10 +11,11 @@ builder.Services.AddHttpClient<IProductService, ProductService>(
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddAuthentication(options => {
+/*builder.Services.AddAuthentication(options =>
+{
     options.DefaultScheme = "Cookies";
     options.DefaultChallengeScheme = "oidc";
-})
+});
     .AddCookie("Cookies", c => c.ExpireTimeSpan = TimeSpan.FromMinutes(10))
     .AddOpenIdConnect("oidc", options =>
     {
@@ -29,7 +30,7 @@ builder.Services.AddAuthentication(options => {
         options.TokenValidationParameters.RoleClaimType = "role";
         options.Scope.Add("geek_shopping");
         options.SaveTokens = true;
-    });
+    });*/
 
 var app = builder.Build();
 
