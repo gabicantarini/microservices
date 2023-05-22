@@ -33,7 +33,7 @@ I've used the follow technologies:<br/>
 
 
 ## Photos <a name="#id03"></a>
-<code><img height="300" width="500" src="" alt="GeekShopping img"></code>
+<code><img height="300" width="500" src="./img/product-list-image.jpg" alt="GeekShopping img"></code>
 
 
 
