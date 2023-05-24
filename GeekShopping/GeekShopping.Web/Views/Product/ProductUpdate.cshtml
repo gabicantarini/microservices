@@ -1,1 +1,11 @@
-﻿
+﻿@model GeekShopping.Web.Models.ProductModel
+
+<form asp-action="ProductUpdate">
+    <input asp-for="Id" hidden>
+    <br/>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial">
+}
