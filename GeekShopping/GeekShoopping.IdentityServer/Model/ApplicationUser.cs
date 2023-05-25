@@ -1,6 +1,10 @@
-﻿namespace GeekShoopping.IdentityServer.Model
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace GeekShoopping.IdentityServer.Model
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }
