@@ -43,5 +43,4 @@ C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekSho
 C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
-C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Gabriela\Desktop\Cantarini\Gabriela\2022TI\dotnet\microservices\GeekShopping\GeekShopping.ProductAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
